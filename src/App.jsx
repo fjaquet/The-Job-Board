@@ -86,19 +86,7 @@ function App() {
   return (
     <>
       <Header title="The Job Board" />
-      <div className="container">
-        {jobs.map((job) => (
-          <Jobs
-            key={job.id}
-            className={job.className}
-            title={job.title}
-            contractType={job.contractType}
-            country={job.country}
-            city={job.city}
-          />
-        ))}
-      </div>
-
+      <Jobs jobs={jobs} />
       <Footer techno="React" orga="Le Reacteur" creator="Nono" />
     </>
   );

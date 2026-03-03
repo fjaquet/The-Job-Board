@@ -1,14 +1,19 @@
 import Job from "./Job";
 
-const Jobs = ({ className, title, contractType, country, city }) => {
+const Jobs = ({ jobs }) => {
   return (
-    <Job
-      className={className}
-      title={title}
-      contractType={contractType}
-      country={country}
-      city={city}
-    />
+    <div className="container">
+      {jobs.map((job) => (
+        <Job
+          key={job.id}
+          className={job.className}
+          title={job.title}
+          contractType={job.contractType}
+          country={job.country}
+          city={job.city}
+        />
+      ))}
+    </div>
   );
 };
 
